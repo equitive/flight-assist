@@ -159,6 +159,7 @@ div.demo-lazy {
 }
 .demo-fab-fullscreen-sheet .page {
   background: #fff;
+
 }
 
 /* Demo Messagebar */
@@ -258,7 +259,7 @@ div.demo-lazy {
   position: absolute;
   right: 0;
   top: 0;
-  background: #ddd;
+  background: #f9b612;
   z-index: 1000;
 }
 .ios .theme-dark .panel-left:after {
@@ -470,4 +471,150 @@ code {
   font-size: 18px;
   text-align: center;
   line-height: 100px;
+}
+
+.logo {
+  width: 200px;
+  height: 50px; 
+
+}
+.mini_logo {
+  width: 200px;
+  height: 50px; 
+
+}
+/* .lg-iconsizes {
+  width: 50px;
+  height: 50px;
+} */
+.left-panel-hr { 
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+  border-color: #f9b612;
+}
+.status-hr { 
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+  border-color: #cccccc;
+}
+
+.vl {
+  border-left: 1px solid #cccccc;
+  /* height: 500px; */
+}
+.container{
+  display:flex;
+}
+
+.flight-status-data-container{
+  /* padding-left: 50px;
+  padding-right: 50px; */
+  /* font-size: 30px; */
+  display:flex;
+}
+
+.flex-item{
+  /* background-color:#7887AB; */
+  flex-grow: 1;
+}
+.vertLine {
+  border-right:1px #ff0000;    /* line 1 pixel width, length of "Some content" */
+}
+
+.flight-status-container {
+  /* padding-left: 50px;
+  padding-right: 50px; */
+  padding-top: 15px;
+  padding-bottom: 15px;
+  /* font-size: 30px; */
+}
+
+.header-fonts {
+  /* font-size: 30px; */
+}
+.timezone {
+  color: #f9b612;
+  font-size: 13px;
+
+}
+
+.icons-color-custom-gold { 
+  color: #f9b612 
+}
+.large-font {
+  font-size: 18px;
+}
+
+.block-title-top {
+  text-transform: uppercase;
+  color: #6d6d72;
+  margin: 0px 15px 10px;
+  line-height: 17px;
+  }
+
+.white-color {
+  color: #fff;
+}
+
+.gold-button {
+  /* border: 1px solid #007aff; */
+  /* color: #007aff; */
+  border-radius: 5px;
+  line-height: 27px;
+  height: 29px;
+  background: #f9b612;
+  color: #fff;
+  font-size: 20px;
+  border-color: transparent;
+
+}
+.color-custom { color: #f9b612 }
+
+.request-title {
+  font-size: 27px;
+
+}
+.numOfPeopleFront {
+  font-size: 27px;
+  color: #f9b612 
+
+}
+.numOfPeopleBack {
+  font-size: 27px;
+  color: #f9b612 
+
+}
+.restroom {
+  font-size: 23px;
+
+}
+.mini-visa {
+  width: 40px;
+  height: 30px; 
+
+}
+.mini-heart {
+  width: 100px;
+  height: 65px; 
+
+}
+.box {
+  display: flex;
+  align-items:center;
+}
+.size-22 { font-size: 22px }
+
+.pad {
+  margin-left: 10px;
+  margin-right:  10px;
 }

@@ -1,4 +1,12 @@
 var routes = [
+  {
+    path: '/restroom/',
+    componentUrl: './pages/restroom.html',
+  },
+  {
+    path: '/order/',
+    componentUrl: './pages/order.html',
+  },
   // Index page
   {
     path: '/',
@@ -468,7 +476,6 @@ var routes = [
     path: '/vi/',
     componentUrl: './pages/vi.html',
   },
-
   // Color Themes
   {
     path: '/color-themes/',

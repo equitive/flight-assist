@@ -1,0 +1,1000 @@
+<template>
+        <div class="page">
+          <div class="navbar">
+            <div class="navbar-inner sliding">
+              <div class="left">
+                <a href="#" class="link back">
+                  <!-- <i class="icon icon-back"></i> -->
+                  <i class="f7-icons color-red">chevron_left</i>
+
+                  <span class="ios-only">Back</span>
+                </a>
+              </div>
+              <div class="title white-color">Request Service</div>
+              <div class="right">
+                    <a href="#" id="order-sum" data-panel="right" class="panel-open">
+                      <!-- <i class="icon icon-back"></i> -->
+                      <span class="ios-only">Order <span class="badge color-red" id="badge-num">0</span></span>
+                    </a>
+                  </div>
+            </div>
+          </div>
+          <div class="panel panel-right panel-reveal">
+            <div class="view view-init view-right" name="right" data-url="/">
+                <div class="page">
+                <div class="navbar">
+                    <div class="navbar-inner sliding">
+                    <div class="title">Your Order</div>
+                    </div>
+                </div>
+                <div class="page-content">
+                    <div class="block">
+                    <center><p class="restroom">Order Summary</p></center>
+                    </div>
+                    <div class="list links-list">
+                        <div class = "pad receipt"></div>
+                    </div>
+                            
+                    <div class="block">
+                        Payment Option:
+                        <br>
+                        <div class="box">
+                            <img class="mini-visa" src="img/visa.png">   
+                            <span style="">x4578 10/2020</span>
+                            <i class="timezone">Change Payment Option</i>
+                        </div>
+                    </div> 
+                    <p class="row">
+                        <button class="col gold-button button button-big ">Place Order</button>
+                    </p>
+                </div>
+                </div>
+            </div>
+          </div>
+          <div class="page-content">
+
+            <div class="block">
+                    <div class="request-title">
+                            <center>
+                            Request Service
+                            </center>
+                        </div>
+              <p>Please use this interface to select how we may be able to make your flight better for you!</p>
+              <p>Things you can request:</p>
+              <p>- Food<br>
+                 - Snacks<br>
+                 - Beverages<br>
+                 - Additional Items <br>
+                 - Other Attendant Requests
+              </p>
+            </div>
+            <div class="block-title-menu">How can we help you?</div>
+            <div class="list no-hairlines-md">
+              <ul>
+                <li>
+                  <div class="item-content item-input">
+                    <div class="item-inner">
+                      <div class="item-input-wrap">
+                        <input type="text" placeholder="Select One" readonly="readonly" id="demo-picker-device"/>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class = "food">
+                <div class="block-title-menu">Food Type</div>
+                <div class="list no-hairlines-md">
+                    <ul>
+                    <li>
+                        <div class="item-content item-input">
+                        <div class="item-inner">
+                            <div class="item-input-wrap">
+                            <input type="text" placeholder="Select One" readonly="readonly" id="food-picker-dependent"/>
+                            </div>
+                        </div>
+                        </div>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+            <div class = "breakfast">
+                    <div class="block-title-menu">Menu</div>
+                    <div class="list no-hairlines-md">
+                        <ul>
+                        <li>
+                            <div class="item-content item-input">
+                            <div class="item-inner">
+                                <div class="item-input-wrap">
+                                <input type="text" placeholder="Select One" readonly="readonly" id="breakfast-picker-dependent"/>
+                                </div>
+                            </div>
+                            </div>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class = "lunch">
+                        <div class="block-title-menu">Menu</div>
+                        <div class="list no-hairlines-md">
+                            <ul>
+                            <li>
+                                <div class="item-content item-input">
+                                <div class="item-inner">
+                                    <div class="item-input-wrap">
+                                    <input type="text" placeholder="Select One" readonly="readonly" id="lunch-picker-dependent"/>
+                                    </div>
+                                </div>
+                                </div>
+                            </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class = "dinner">
+                            <div class="block-title-menu">Menu</div>
+                            <div class="list no-hairlines-md">
+                                <ul>
+                                <li>
+                                    <div class="item-content item-input">
+                                    <div class="item-inner">
+                                        <div class="item-input-wrap">
+                                        <input type="text" placeholder="Select One" readonly="readonly" id="dinner-picker-dependent"/>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </li>
+                                </ul>
+                            </div>
+                        </div>
+            <div class = "snacks">
+                    <div class="block-title-menu">Snack Menu</div>
+                    <div class="list no-hairlines-md">
+                        <ul>
+                        <li>
+                            <div class="item-content item-input">
+                            <div class="item-inner">
+                                <div class="item-input-wrap">
+                                <input type="text" placeholder="Select One" readonly="readonly" id="snack-picker-dependent"/>
+                                </div>
+                            </div>
+                            </div>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class = "beverage">
+                    <div class="block-title-menu">Beverage Menu</div>
+                    <div class="list no-hairlines-md">
+                        <ul>
+                        <li>
+                            <div class="item-content item-input">
+                            <div class="item-inner">
+                                <div class="item-input-wrap">
+                                <input type="text" placeholder="Select One" readonly="readonly" id="beverage-picker-dependent"/>
+                                </div>
+                            </div>
+                            </div>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class = "juice">
+                        <div class="block-title-menu">Juice Menu</div>
+                        <div class="list no-hairlines-md">
+                            <ul>
+                            <li>
+                                <div class="item-content item-input">
+                                <div class="item-inner">
+                                    <div class="item-input-wrap">
+                                    <input type="text" placeholder="Select One" readonly="readonly" id="juice-picker-dependent"/>
+                                    </div>
+                                </div>
+                                </div>
+                            </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class = "soda">
+                            <div class="block-title-menu">Soda Menu</div>
+                            <div class="list no-hairlines-md">
+                                <ul>
+                                <li>
+                                    <div class="item-content item-input">
+                                    <div class="item-inner">
+                                        <div class="item-input-wrap">
+                                        <input type="text" placeholder="Select One" readonly="readonly" id="soda-picker-dependent"/>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class = "water">
+                                <div class="block-title-menu">Water Menu</div>
+                                <div class="list no-hairlines-md">
+                                    <ul>
+                                    <li>
+                                        <div class="item-content item-input">
+                                        <div class="item-inner">
+                                            <div class="item-input-wrap">
+                                            <input type="text" placeholder="Select One" readonly="readonly" id="water-picker-dependent"/>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class = "coffee">
+                                    <div class="block-title-menu">Coffee Menu</div>
+                                    <div class="list no-hairlines-md">
+                                        <ul>
+                                        <li>
+                                            <div class="item-content item-input">
+                                            <div class="item-inner">
+                                                <div class="item-input-wrap">
+                                                <input type="text" placeholder="Select One" readonly="readonly" id="coffee-picker-dependent"/>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class = "alcohol">
+                                        <div class="block-title-menu">Alcohol Menu</div>
+                                        <div class="list no-hairlines-md">
+                                            <ul>
+                                            <li>
+                                                <div class="item-content item-input">
+                                                <div class="item-inner">
+                                                    <div class="item-input-wrap">
+                                                    <input type="text" placeholder="Select One" readonly="readonly" id="alcohol-picker-dependent"/>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                            </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+            <div class="additional-coffee">
+                    <div class="block block-strong text-align-center">
+
+                <div class="row">
+                    <div class="col">
+
+                    <small>Sugar</small>
+                    <div class="stepper stepper-init">
+                        <div class="stepper-button-minus"></div>
+                        <div class="stepper-input-wrap">
+                        <input id="sugar" type="text" value="0" min="0" max="10" step="1" readonly>
+                        </div>
+                        <div class="stepper-button-plus"></div>
+                    </div>
+                    </div>
+                    <div class="col">
+                        <small>Creamer</small>
+                        <div class="stepper stepper-init">
+                            <div class="stepper-button-minus"></div>
+                            <div class="stepper-input-wrap">
+                            <input id = "creamer" type="text" value="0" min="0" max="10" step="1" readonly>
+                            </div>
+                            <div class="stepper-button-plus"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class = "items">
+                    <div class="block-title-menu">In-Flight Items</div>
+                    <div class="list no-hairlines-md">
+                        <ul>
+                        <li>
+                            <div class="item-content item-input">
+                            <div class="item-inner">
+                                <div class="item-input-wrap">
+                                <input type="text" placeholder="Select One" readonly="readonly" id="item-picker-dependent"/>
+                                </div>
+                            </div>
+                            </div>
+                        </li>
+                        </ul>
+                    </div>
+            </div>
+            <div class = "assistance">
+                    <div class="block-title-menu">Flight Attendent Help</div>
+                    <div class="list inline-labels no-hairlines-md">
+                      <ul>
+                        <li class="item-content item-input">
+                          <div class="item-inner">
+                            <!-- <div class="item-title item-label">Resizable</div> -->
+                            <div class="item-input-wrap">
+                              <textarea id="help-text" class="resizable" placeholder="How can we help you?"></textarea>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                </div>
+            <div class="block">
+                <p class="row">
+                    <button id="addToOrder" class="col gold-button button button-big ">Add Service to Order</button>
+                </p>
+                <p>Select the order button on the top-right of the screen to process your requests</p>
+                <input type="text" id="firstname">
+
+
+                <ol id="demo"></ol>
+
+
+            </div>
+
+        </div>
+      </template>
+      <script>
+        return {
+          on: {
+            pageInit: function (e, page) {
+              var self = this;
+              var today = new Date();
+              var app = self.$app;
+              //Export DOM7 to local variable to make it easy accessable
+              var $$ = Dom7;
+              $$('.assistance').hide();
+              $$('.items').hide();
+              $$('.food').hide();
+              $$('.snacks').hide();
+              $$('.beverage').hide();
+              $$('.additional-coffee').hide();
+              $$('.breakfast').hide();
+              $$('.lunch').hide();
+              $$('.dinner').hide();
+              $$('.juice').hide();
+              $$('.alcohol').hide();
+              $$('.soda').hide();
+              $$('.water').hide();
+              $$('.coffee').hide();
+
+
+              var snack = false;
+              var manger = false;
+              var chose = false;
+              var assist = false;
+              var drink = false;
+              var coffee = false;
+              var selectedItem;
+              var order = []
+              var foodDB = [
+                  ["Toast", 0, 3.00],
+                  ["Orange Juice", 1, 0.00],
+                  ["Napkins",2, 0.00],
+                  ["Fruit",3, 6.00],
+                  ["Apple Juice",4, 0.00],
+                  ["Cranberry Juice",5, 0.00],
+                  ["Headphones",6, 5.00],
+                  ["Blanket",7, 8.00],
+                  ["Sandwich", 8, 9.00],
+                  ["[V] Sandwich", 9, 8.00],
+                  ["Tenders",10, 10.00],
+                  ["Bloody Mary",11, 8.00],
+                  ["Pretzels",12, 0.00],
+                  ["Crackers",13, 0.00],
+                  ["Peanuts",14, 0.00], 
+                  ["Peanuts",14, 0.00],
+                  ["Oatmeal",15, 5.00],
+                  ["Salad", 16, 8.00],
+                  ["Wrap", 17, 9.00],
+                  ["Tomato Juice",18, 0.00],
+                  ["Ginger Ale",19, 0.00],
+                  ["Diet Coke",20, 0.00],
+                  ["Sprite",21, 0.00],
+                  ["Cola",22, 0.00],
+                  ["Seltzer Water",23, 0.00],
+                  ["Water", 24, 0.00],
+                  ["Black Coffee", 25, 0.00],
+                  ["Tonic Water",26, 0.00],
+                  ["Jack and Coke",27, 8.00],
+                  ["Miller Lite",28, 8.00],
+                  ["Sparkling Wine",29, 8.00],
+                  ["Sugar",30, 0.00],
+                  ["Creamer",31, 0.00],
+                  ["", 32],
+                  ["", 33],
+                  ["",34],
+                  ["",35],
+                  ["",36],
+                  ["",37],
+                  ["",38],
+                  ["",39],
+                  ["",40]
+              ]
+
+              $$('#addToOrder').on('click', function (e) {
+                    var itemID;
+                    var item;
+
+
+
+                  if(snack == true) {
+                      console.log("snak")
+                      for(var i = 0; i < foodDB.length; i++) {
+                        item = foodDB[i]
+                        if(selectedItem == item[0] ) {
+                        itemID = item
+                        order.push(itemID)
+
+                        console.log(itemID)
+                        break;
+
+
+                        }
+                    }
+
+                    // order.push(selectedItem)
+                  } else if (manger == true) {
+                    console.log("f00d")
+                    for(var i = 0; i < foodDB.length; i++) {
+                        item = foodDB[i]
+                        if(selectedItem == item[0] ) {
+                        itemID = item
+                        order.push(itemID)
+                        break;
+
+                        }
+                    }
+
+                    // order.push(selectedItem)
+
+                  } else if( chose == true) {
+                    console.log("itm")
+                    for(var i = 0; i < foodDB.length; i++) {
+                        item = foodDB[i]
+                        if(selectedItem == item[0] ) {
+                        itemID = item
+                        order.push(itemID)
+                        break;
+
+                        }
+                    }
+                    // order.push(selectedItem)
+
+                  } else if ( assist ==true) {
+                    console.log("help")
+                    order.push($$('#help-text').val())
+
+
+                  } else if (drink == true) {
+                    console.log("bois")
+                    for(var i = 0; i < foodDB.length; i++) {
+                        item = foodDB[i]
+                        if(selectedItem == item[0] ) {
+                        itemID = item
+                        order.push(itemID)
+                        if(coffee == true) {
+                            var sugars = $$('#sugar').val()
+                            var creamers = $$('#creamer').val()
+                            if(sugars > 0) {
+                                for(var j = 0; j == sugars; j++) {
+                                 order.push(["Sugar",30])
+                                }
+                            }
+                            if(creamers > 0) {
+                                for(var j = 0; j == creamers; j++) {
+                                    order.push(["Creamer",31])
+                                }
+                            }
+                        }
+                        coffee == false;
+                        break;
+
+                        }
+                    }
+                  }
+
+                  console.log(order)
+                  $$('#badge-num').html(order.length)
+
+                    // $$(this).addClass('hello').attr('title', 'world').insertAfter('.something-else');
+                });
+
+                $$('.removeItem').on('click', function (e) {
+                    console.log("remove")
+
+                    var user = $$('.removeItem').data();
+
+                    // (itemid)
+                    var item = document.getElementById(itemid);
+                    list.removeChild(item);
+                    order.splice(itemid, 1);
+                    
+                    console.log(user)
+                    // var user = $$('a').data('name');
+
+                    // // var index = array.indexOf(5);
+                    // // if (index > -1) {
+                    // order.splice(user.name, 1);
+                    // // }
+
+                    // var html;
+                    // var total = 0;
+
+                    // html = '<hr>'
+                    // for(var u = 0; u < order.length; u++) {
+                    //     html +=  order[u][0] + '<div style="float: right;">$' + order[u][2] + '</div> <i><div class="timezone"><center><a id="removeItem" name="'+u+'">Remove</a></center></div></i><hr>'
+                    //     total += order[u][2]
+
+                    // }
+                    // html += '<div class="block"> Total: <div style="float: right;">$' + total+'</div> </div>'
+
+
+                    // $$('.receipt').html(
+                    //     html
+
+                    // )
+                })
+
+                var list = document.getElementById('demo');
+                var lastid = 0;
+
+
+
+                function changeText2() {
+
+                }
+
+
+                $$('#order-sum').on('click', function (e) {
+                    // var firstname = document.getElementById('firstname').value;
+                    // var entry = document.createElement('li');
+                    // entry.appendChild(document.createTextNode(firstname));
+                    // entry.setAttribute('id','item'+lastid);
+                    // var removeButton = document.createElement('button');
+                    // removeButton.appendChild(document.createTextNode("remove"));
+                    // removeButton.setAttribute('class','removeItem');
+
+                    // removeButton.setAttribute('id','item'+lastid);
+                    // entry.appendChild(removeButton);
+                    // lastid+=1;
+                    // list.appendChild(entry);
+                    console.log('clicked');
+                    var html;
+                    var total = 0;
+
+                    html = '<hr>'
+                    for(var u = 0; u < order.length; u++) {
+                        html +=  order[u][0] + '<div style="float: right;">$' + order[u][2] + '</div> <i><div class="timezone"><center>Remove</center></div></i><hr>'
+                        total += order[u][2]
+
+                    }
+                    html += '<div class="block"> Total: <div style="float: right;">$' + total+'</div> </div>'
+
+
+                    $$('.receipt').html(
+                        html
+
+                    )
+
+                });
+
+
+              // iOS Device picker
+              self.pickerDevice = app.picker.create({
+                inputEl: '#demo-picker-device',
+                cols: [
+                  {
+                    textAlign: 'center',
+                    values: ['Food', 'Snacks', 'Beverages', 'Items', 'Assistance'],
+                    onChange: function (picker, request) {
+                      if(request == "Food"){
+                          console.log("Food")
+                        $$('.assistance').hide();
+                        $$('.items').hide();
+                        $$('.snacks').hide();
+                        $$('.food').show();
+                        $$('.beverage').hide();
+                        $$('.additional-coffee').hide();
+                        $$('.juice').hide();
+                        $$('.alcohol').hide();
+                        $$('.soda').hide();
+                        $$('.water').hide();
+                        $$('.coffee').hide();
+                        snack = false;
+                            manger = true;
+                            assist = false;
+                            drink = false;
+                                      chose = false;
+
+                      } else if(request == "Snacks"){
+                          console.log("Snacks")
+                        $$('.assistance').hide();
+                        $$('.items').hide();
+                        $$('.snacks').show();
+                        $$('.beverage').hide();
+                        $$('.additional-coffee').hide();
+                        $$('.breakfast').hide();
+                        $$('.lunch').hide();
+                        $$('.dinner').hide();
+                        $$('.food').hide();
+                        $$('.juice').hide();
+                        $$('.alcohol').hide();
+                        $$('.soda').hide();
+                        $$('.water').hide();
+                        $$('.coffee').hide();
+                        snack = true;
+                            manger = false;
+                            assist = false;
+                            drink = false;
+                                      chose = false;
+                      }  
+                      else if (request == "Beverages") {
+                        console.log("Items")
+                        $$('.assistance').hide();
+                        $$('.items').hide();
+                        $$('.food').hide();
+                        $$('.snacks').hide();
+                        $$('.beverage').show();
+                        $$('.breakfast').hide();
+                        $$('.lunch').hide();
+                        $$('.dinner').hide();
+                        $$('.juice').hide();
+                        $$('.alcohol').hide();
+                        $$('.soda').hide();
+                        $$('.water').hide();
+                        $$('.coffee').hide();
+                        snack = false;
+                            manger = false;
+                            assist = false;
+                            drink = true;
+                                      chose = false;
+                      } 
+                      else if (request == "Items") {
+                        console.log("Items")
+                        $$('.assistance').hide();
+                        $$('.items').show();
+                        $$('.food').hide();
+                        $$('.snacks').hide();
+                        $$('.beverage').hide();
+                        $$('.additional-coffee').hide();
+                        $$('.breakfast').hide();
+                        $$('.lunch').hide();
+                        $$('.dinner').hide();
+                        $$('.juice').hide();
+                        $$('.alcohol').hide();
+                        $$('.soda').hide();
+                        $$('.water').hide();
+                        $$('.coffee').hide();
+                         snack = false;
+                            manger = false;
+                            assist = false;
+                            drink = false;
+                                      chose = true;
+                      } else if(request == "Assistance") {
+                        console.log("Assistance")
+                        $$('.assistance').show();
+                        $$('.items').hide();
+                        $$('.food').hide();
+                        $$('.snacks').hide();
+                        $$('.beverage').hide();
+                        $$('.additional-coffee').hide();
+                        $$('.breakfast').hide();
+                        $$('.lunch').hide();
+                        $$('.dinner').hide();
+                        $$('.juice').hide();
+                        $$('.alcohol').hide();
+                        $$('.soda').hide();
+                        $$('.water').hide();
+                        $$('.coffee').hide();
+                        snack = false;
+                            manger = false;
+                            assist = true;
+                            drink = false;
+                                      chose = false;
+                      }
+                      console.log(snack)
+                      console.log(drink)
+                      console.log(manger)
+                      console.log(chose)
+                      console.log(assist)
+
+                      
+                    }
+                  },
+                  
+                ]
+              });
+
+            // iOS Device picker
+            self.pickerDevice = app.picker.create({
+                inputEl: '#food-picker-dependent',
+                cols: [
+                  {
+                    textAlign: 'center',
+                    values: ['Breakfast', 'Lunch', 'Dinner'],
+                    displayValues: ['Breakfast', 'Lunch', 'Dinner'],
+
+                    onChange: function (picker, request) {
+
+                        if(request == "Breakfast") {
+                            $$('.breakfast').show();
+                            $$('.lunch').hide();
+                            $$('.dinner').hide();
+
+                        } else if (request == "Lunch") {
+                            $$('.breakfast').hide();
+                            $$('.lunch').show();
+                            $$('.dinner').hide();
+                        } else if (request == "Dinner") {
+                            $$('.breakfast').hide();
+                            $$('.lunch').hide();
+                            $$('.dinner').show();
+                        }
+
+                    //   selectedItem = request
+
+                    }
+                  },
+
+                ]
+              });
+                          // iOS Device picker
+            self.pickerDevice = app.picker.create({
+                inputEl: '#breakfast-picker-dependent',
+                cols: [
+                  {
+                    textAlign: 'center',
+                    values: ['Toast', 'Oatmeal', 'Fruit'],
+                    displayValues: ['Toast', 'Oatmeal', 'Fruit'],
+
+                    onChange: function (picker, request) {
+
+                      selectedItem = request
+
+                    }
+                  },
+
+                ]
+              });
+
+             self.pickerDevice = app.picker.create({
+                inputEl: '#lunch-picker-dependent',
+                cols: [
+                  {
+                    textAlign: 'center',
+                    values: ['Sandwich', '[V] Sandwich', 'Salad'],
+                    displayValues: ['Sandwich', '[V] Sandwich', 'Salad'],
+
+                    onChange: function (picker, request) {
+
+                      selectedItem = request
+
+                    }
+                  },
+
+                ]
+              });
+              self.pickerDevice = app.picker.create({
+                inputEl: '#dinner-picker-dependent',
+                cols: [
+                  {
+                    textAlign: 'center',
+                    values: ['Sandwich', '[V] Sandwich', 'Salad', 'Wrap', 'Tenders'],
+                    displayValues: ['Sandwich', '[V] Sandwich', 'Salad', 'Wrap', 'Tenders'],
+
+                    onChange: function (picker, request) {
+
+                      selectedItem = request
+
+                    }
+                  },
+
+                ]
+              });
+
+
+              self.pickerDevice = app.picker.create({
+                inputEl: '#beverage-picker-dependent',
+                cols: [
+                  {
+                    textAlign: 'center',
+                    values: ['Juice', 'Soda', 'Water', 'Coffee', 'Alcoholic'],
+                    displayValues: ['Juice', 'Soda', 'Water', 'Coffee', 'Alcoholic'],
+
+                    onChange: function (picker, request) {
+
+                        if(request == "Juice") {
+                            coffee == false
+
+                            $$('.additional-coffee').hide();
+                            $$('.juice').show();
+                            $$('.alcohol').hide();
+                            $$('.soda').hide();
+                            $$('.water').hide();
+                            $$('.coffee').hide();
+
+                        } else if (request == "Soda") {
+                            coffee == false
+
+                            $$('.additional-coffee').hide();
+                            $$('.juice').hide();
+                            $$('.alcohol').hide();
+                            $$('.soda').show();
+                            $$('.water').hide();
+                            $$('.coffee').hide();
+                        } else if (request == "Water") {
+                            coffee == false
+
+                            $$('.additional-coffee').hide();
+                            $$('.juice').hide();
+                            $$('.alcohol').hide();
+                            $$('.soda').hide();
+                            $$('.water').show();
+                            $$('.coffee').hide();
+                        } else if (request == "Coffee") {
+                            coffee == true
+                            $$('.additional-coffee').show();
+                            $$('.juice').hide();
+                            $$('.alcohol').hide();
+                            $$('.soda').hide();
+                            $$('.water').hide();
+                            $$('.coffee').show();
+                        } else if (request == "Alcoholic") {
+                            coffee == false
+
+                            $$('.additional-coffee').hide();
+                            $$('.juice').hide();
+                            $$('.alcohol').show();
+                            $$('.soda').hide();
+                            $$('.water').hide();
+                            $$('.coffee').hide();
+                        }
+                    
+                    }
+                  },
+
+                ]
+              });
+
+              self.pickerDevice = app.picker.create({
+                inputEl: '#juice-picker-dependent',
+                cols: [
+                  {
+                    textAlign: 'center',
+                    values: ['Orange Juice', 'Apple Juice', 'Cranberry Juice', 'Tomato Juice'],
+                    displayValues: ['Orange Juice', 'Apple Juice', 'Cranberry Juice', 'Tomato Juice'],
+
+                    onChange: function (picker, request) {
+
+
+                      selectedItem = request
+
+                    }
+                  },
+
+                ]
+              });
+
+              self.pickerDevice = app.picker.create({
+                inputEl: '#soda-picker-dependent',
+                cols: [
+                  {
+                    textAlign: 'center',
+                    values: ['Cola', 'Sprite', 'Ginger Ale', 'Diet Coke'],
+                    displayValues: ['Cola', 'Sprite', 'Ginger Ale', 'Diet Coke'],
+
+                    onChange: function (picker, request) {
+
+                      selectedItem = request
+
+                    }
+                  },
+
+                ]
+              });
+
+              self.pickerDevice = app.picker.create({
+                inputEl: '#water-picker-dependent',
+                cols: [
+                  {
+                    textAlign: 'center',
+                    values: ['Water', 'Seltzer Water', 'Tonic Water'],
+                    displayValues: ['Water', 'Seltzer Water', 'Tonic Water'],
+
+                    onChange: function (picker, request) {
+   
+                      selectedItem = request
+
+                    }
+                  },
+
+                ]
+              });
+
+              self.pickerDevice = app.picker.create({
+                inputEl: '#coffee-picker-dependent',
+                cols: [
+                  {
+                    textAlign: 'center',
+                    values: ['Black Coffee'],
+                    displayValues: ['Black Coffee'],
+
+                    onChange: function (picker, request) {
+
+
+                      selectedItem = request
+
+                    }
+                  },
+
+                ]
+              });
+
+              self.pickerDevice = app.picker.create({
+                inputEl: '#alcohol-picker-dependent',
+                cols: [
+                  {
+                    textAlign: 'center',
+                    values: ['Bloody Mary', 'Jack and Coke', 'Miller Lite', 'Sparkling Wine'],
+                    displayValues: ['Bloody Mary', 'Jack and Coke', 'Miller Lite', 'Sparkling Wine'],
+
+                    onChange: function (picker, request) {
+
+                      selectedItem = request
+
+                    }
+                  },
+
+                ]
+              });
+
+              // iOS Device picker
+              self.pickerDevice = app.picker.create({
+                inputEl: '#item-picker-dependent',
+                cols: [
+                  {
+                    textAlign: 'center',
+                    values: ['Blanket', 'Headphones', 'Napkins'],
+                    displayValues: ['Blanket', 'Headphones', 'Napkins'],
+
+                    onChange: function (picker, request) {
+
+                      selectedItem = request
+
+                    }
+                  },
+
+                ]
+              });
+
+            // iOS Device picker
+            self.pickerDevice = app.picker.create({
+                inputEl: '#snack-picker-dependent',
+                cols: [
+                  {
+                    textAlign: 'center',
+                    values: ['Pretzels', 'Peanuts', 'Crackers'],
+                    displayValues: ['Pretzels', 'Peanuts', 'Crackers'],
+
+                    onChange: function (picker, request) {                        
+                        selectedItem = request
+
+                    }
+                  },
+                  
+                ]
+              });
+
+
+            },
+            pageBeforeRemove() {
+              var self = this;
+              self.pickerDevice.destroy();
+            //   self.pickerDescribe.destroy();
+              self.pickerDependent.destroy();
+            //   self.pickerCustomToolbar.destroy();
+            },
+          }
+        }
+      </script>
+      

@@ -1,0 +1,221 @@
+<template>
+
+<div class="page">
+    <div class="navbar">
+        <div class="navbar-inner sliding">
+        <div class="left">
+            <a href="#" class="link back">
+            <!-- <i class="icon icon-back color-custom"></i> -->
+            <i class="f7-icons color-red">chevron_left</i>
+
+            <span class="ios-only">Back</span>
+            </a>
+        </div>
+        <div class="title white-color">Restroom Queue</div>
+        </div>
+    </div>
+    <div class="page-content">
+        <div class="block">
+            <div class="request-title">
+                    <center>
+                    Restroom Queue
+                    </center>
+                </div>
+              <p>Please use this interface to receive a notification when it is your turn to use the restroom!</p>
+              <div class="restroom-actions">
+                    <div class="checkin-time"></div>
+                    <div class="row">
+                    <button id="check-in" class="col gold-button button button">Check-In</button>
+                    <button id="done" class="col gold-button button button">Done</button>
+                    </div>
+              </div>
+        </div>
+        <p><span data-progress="0" class="progressbar" id="demo-inline-progressbar"></span></p>
+        <div class="flex-item">
+            <center>
+                <div class="restroom">
+                        There are <br>
+                        <div class="numOfPeopleFront">
+                        <!-- 3 people -->
+                        </div>
+                        in line for the front restroom.
+                </div>
+                <br>
+                <img class="lg-iconsizes" src="img/front_plane.png">
+                <br>
+                <button class="col gold-button button button-big open-alert-front">Join Front Queue</button>
+            </center>
+        </div>
+        <p><span data-progress="0" class="progressbar" id="demo-inline-progressbar"></span></p>
+        <div class="flex-item">
+            <center>
+                <div class="restroom">
+                        There are <br>
+                        <div class="numOfPeopleBack">
+    
+                        <!-- 2 people -->
+                        </div>
+                        in line for the rear restroom.<br>
+                        </div>
+                        <br>
+                        <img class="lg-iconsizes" src="img/back_plane.png">
+                <br>
+            <button class="col gold-button button button-big open-alert-rear">Join Rear Queue</button>
+            </center>
+        </div>
+    </div>
+</div>
+</template>
+<script>
+    return {
+          on: {
+            pageInit: function (e, page) {
+                var self = this;
+                var today = new Date();
+                var app = self.$app;
+                //Export DOM7 to local variable to make it easy accessable
+                var $$ = Dom7;
+
+
+                var rearQueue = 4;
+                var frontQueue = 3;
+                var inLine = false;
+                var yourTurn = false;
+                var checkedIn = false;
+                $$(".numOfPeopleFront").html(frontQueue + " people")
+                $$(".numOfPeopleBack").html(rearQueue + " people")
+
+
+                $$(".restroom-actions").hide();
+                
+                // Alert
+                $$('.open-alert-rear').on('click', function () {
+                    if(inLine == false && yourTurn == false) {
+                        inLine = true
+                        rearQueue = rearQueue + 1
+                        $$(".numOfPeopleBack").html(rearQueue + " people")
+                        app.dialog.alert("You've been added to the rear restroom queue.");
+                        
+                        var refreshId = setInterval(function () {
+                            rearQueue = rearQueue-1
+                            $$(".numOfPeopleBack").html(rearQueue + " people")
+
+                            if(rearQueue == 0) {
+                                yourTurn = true
+                                $$(".restroom-actions").show();
+                                var count = 60
+                                var checkincount = setInterval(function () {
+                                    count = count - 1;
+                                    $$(".checkin-time").html(count +" seconds")
+                                    if(checkedIn == true) {
+                                        clearInterval(checkincount);
+                                    } else if(count == 0) {
+                                        inLine = false
+                                        yourTurn = false
+                                    }
+                                }, 1000);
+
+                                notificationRear.open();                            
+                                rearQueue = 5
+                                $$(".numOfPeopleBack").html(rearQueue + " people")
+                                clearInterval(refreshId);
+                                inLine = false
+
+                            }
+                            // indexVariable = ++indexVariable % 360 + 1; // SET { 1-360 }
+                        }, 1000);
+                    } else {
+                        if(yourTurn == false) {
+                            app.dialog.alert("You're already in line for the front restroom.");
+                        } else {
+                            app.dialog.alert("Its your turn to use the restroom.");
+
+                        }
+                    }
+                });
+                $$('#done').on('click', function () {
+                    yourTurn = false
+                    checkedIn = false
+                    $$(".restroom-actions").hide();
+
+                })
+
+                $$('#check-in').on('click', function () {
+                    checkedIn = true
+                    $$(".checkin-time").hide();
+                    $$('#check-in').prop({
+                        disabled: true
+                    })
+
+                })
+
+
+                $$('.open-alert-front').on('click', function () {
+                    if(inLine == false && yourTurn == false) {
+                        inLine = true
+
+                        frontQueue = frontQueue + 1
+                        $$(".numOfPeopleFront").html(frontQueue + " people")
+                        app.dialog.alert("You've been added to the front restroom queue.");
+                        
+                        var refreshId = setInterval(function () {
+                            frontQueue = frontQueue-1
+                            $$(".numOfPeopleFront").html(frontQueue + " people")
+
+                            if(frontQueue == 0) {
+                                yourTurn = true
+                                $$(".restroom-actions").show();
+                                var count = 60
+                                var checkincount = setInterval(function () {
+                                    count = count - 1;
+                                    $$(".checkin-time").html(count +" seconds")
+                                    if(checkedIn == true) {
+                                        clearInterval(checkincount);
+                                    } else if(count == 0) {
+                                        inLine = false
+                                        yourTurn = false
+                                    }
+                                }, 1000);
+                                notificationFront.open();                            
+                                frontQueue = 5
+                                $$(".numOfPeopleFront").html(frontQueue + " people")
+                                clearInterval(refreshId);
+                                inLine = false
+
+                            }
+                            // indexVariable = ++indexVariable % 360 + 1; // SET { 1-360 }
+                        }, 1000);
+                    } else {
+                        if(yourTurn == false) {
+                            app.dialog.alert("You're already in line for the rear restroom.");
+                        } else {
+                            app.dialog.alert("Its your turn to use the restroom.");
+
+                        }
+                    }
+                });
+                // Create full-layout notification
+                var notificationFront = app.notification.create({
+                // icon: '<i class="icon demo-icon">7</i>',
+                title: 'Its Your Turn!',
+                titleRightText: 'now',
+                subtitle: 'You\'re Next in line to use the front restroom',
+                text: 'You can go to the front restroom at this time. Indicate you received this message in the next 2 minutes or your spot will be forfeited',
+                closeTimeout: 5000,
+                });
+
+                var notificationRear = app.notification.create({
+                // icon: '<i class="icon demo-icon">7</i>',
+                title: 'Its Your Turn!',
+                titleRightText: 'now',
+                subtitle: 'You\'re Next in line to use the rear restroom',
+                text: 'You can go to the rear restroom at this time. Indicate you received this message in the next 2 minutes or your spot will be forfeited',
+                closeTimeout: 5000,
+                });
+            }
+        }
+    }
+
+
+        
+</script>
